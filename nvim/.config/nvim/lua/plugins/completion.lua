@@ -20,7 +20,7 @@ return {
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 		local colorizer = require("tailwindcss-colorizer-cmp").formatter
-		vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#22272D", bg = "NONE" })
+		-- vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#22272D", bg = "NONE" })
 
 		local lsp_kinds = {
 			Class = " ",
@@ -63,7 +63,7 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
-					winhighlight = "Normal:Pmenu,FloatBorder:CmpBorder,Search:None",
+					winhighlight = "Normal:None,FloatBorder:None,Search:None",
 				},
 				documentation = cmp.config.window.bordered(),
 			},

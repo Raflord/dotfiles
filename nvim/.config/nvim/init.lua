@@ -2,4 +2,4 @@ require("core")
 require("lazy_setup")
 
 -- set colorscheme here
-vim.cmd.colorscheme("kanso")
+vim.cmd.colorscheme("vague")

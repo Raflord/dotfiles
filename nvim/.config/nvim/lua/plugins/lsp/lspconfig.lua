@@ -144,7 +144,7 @@ return {
 			"cssls",
 			"tailwindcss",
 			"ruff",
-			"ty",
+			-- "ty",
 			"basedpyright",
 			"superhtml",
 			"biome",
