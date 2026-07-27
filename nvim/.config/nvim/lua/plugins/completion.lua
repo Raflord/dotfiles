@@ -20,7 +20,6 @@ return {
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 		local colorizer = require("tailwindcss-colorizer-cmp").formatter
-		-- vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#22272D", bg = "NONE" })
 
 		local lsp_kinds = {
 			Class = " ",

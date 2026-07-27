@@ -56,11 +56,20 @@ return {
 			})
 		end,
 	},
-	{ "thesimonho/kanagawa-paper.nvim" },
-	{ "rebelot/kanagawa.nvim" },
 	{
 		"vague-theme/vague.nvim",
 		config = function()
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				callback = function()
+					vim.api.nvim_set_hl(0, "NormalFloat", {
+						link = "Normal",
+					})
+
+					vim.api.nvim_set_hl(0, "FloatBorder", {
+						link = "Normal",
+					})
+				end,
+			})
 			require("vague").setup({
 				on_highlights = function(hl, colors)
 					local custom_highlights = {
@@ -77,5 +86,4 @@ return {
 			})
 		end,
 	},
-	{ "rose-pine/neovim", name = "rose-pine" },
 }
