@@ -33,7 +33,7 @@ return {
 			-- servers for mason to install
 			ensure_installed = {
 				"lua_ls",
-				"ts_ls",
+				"tsgo",
 				"html",
 				"cssls",
 				"tailwindcss",
@@ -43,7 +43,7 @@ return {
 				"marksman",
 				"superhtml",
 				"ruff",
-				-- "ty",
+				"ty",
 				"basedpyright",
 				"templ",
 			},

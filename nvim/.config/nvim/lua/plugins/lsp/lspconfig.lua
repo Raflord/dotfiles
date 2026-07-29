@@ -114,16 +114,6 @@ return {
 			},
 		})
 
-		vim.lsp.config("ts_ls", {
-			single_file_support = false,
-			init_options = {
-				preferences = {
-					includeCompletionsWithSnippetText = true,
-					includeCompletionsForImportStatements = true,
-				},
-			},
-		})
-
 		vim.lsp.config("gopls", {
 			settings = {
 				gopls = {
@@ -138,7 +128,7 @@ return {
 
 		vim.lsp.enable({
 			"lua_ls",
-			"ts_ls",
+			"tsgo",
 			"gopls",
 			"html",
 			"cssls",
