@@ -44,7 +44,6 @@ return {
 				"superhtml",
 				"ruff",
 				"ty",
-				"basedpyright",
 				"templ",
 			},
 		})

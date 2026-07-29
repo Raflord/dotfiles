@@ -7,15 +7,6 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		-- -- Make Noice popup documentation use the editor background
-		-- vim.api.nvim_set_hl(0, "NoicePopup", {
-		-- 	link = "NONE",
-		-- })
-		--
-		-- -- -- Optional: make the border use your normal FloatBorder styling
-		-- vim.api.nvim_set_hl(0, "NoicePopupBorder", {
-		-- 	link = "NONE",
-		-- })
 		require("noice").setup({
 			cmdline = {
 				view = "cmdline",
