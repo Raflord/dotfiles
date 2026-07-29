@@ -13,7 +13,7 @@ mouse-hide-while-typing = true
 window-save-state = always
 gtk-tabs-location = hidden
 
-keybind = unconsumed:ctrl+r=reload_config
+keybind = unconsumed:ctrl+space>r=reload_config
 
 keybind = ctrl+arrow_up=scroll_page_up
 keybind = ctrl+arrow_down=scroll_page_down
