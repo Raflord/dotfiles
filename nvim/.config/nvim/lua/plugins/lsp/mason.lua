@@ -35,7 +35,6 @@ return {
 				"lua_ls",
 				"tsgo",
 				"html",
-				"cssls",
 				"tailwindcss",
 				"gopls",
 				"emmet_ls",

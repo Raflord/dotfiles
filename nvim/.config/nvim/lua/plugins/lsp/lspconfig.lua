@@ -131,7 +131,6 @@ return {
 			"tsgo",
 			"gopls",
 			"html",
-			"cssls",
 			"tailwindcss",
 			"ruff",
 			"ty",
