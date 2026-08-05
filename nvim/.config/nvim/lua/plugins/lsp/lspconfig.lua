@@ -138,6 +138,8 @@ return {
 			"biome",
 			"templ",
 			"taplo",
+			"shfmt",
+			"bashls",
 		})
 	end,
 }
