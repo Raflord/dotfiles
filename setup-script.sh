@@ -5,8 +5,6 @@ IFS=$'\n\t'
 
 readonly SCRIPT_NAME="${0##*/}"
 readonly DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
-readonly APPIMAGE_ROOT="${APPIMAGE_ROOT:-$HOME/.local/share}"
-readonly APPLICATIONS_DIR="$APPIMAGE_ROOT/applications"
 
 PACMAN_PACKAGES=(
     thunar
@@ -42,11 +40,7 @@ PACMAN_PACKAGES=(
     tree-sitter-cli
     gnome-calculator
     gnome-disk-utility
-)
-
-APPIMAGE_PACKAGES=(
-    helium
-    openrgb
+    firefox
 )
 
 REMOVE_PACKAGES=(
@@ -307,7 +301,6 @@ main() {
 
     install_stow_configs
 
-    install_appimages
     install_cli_tools
     remove_unwanted_packages
 
