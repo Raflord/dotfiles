@@ -62,7 +62,7 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
-					winhighlight = "Normal:None,FloatBorder:None,Search:None",
+					winhighlight = "Normal:FLoatBorder,FloatBorder:FloatBorder,Search:FloatBorder",
 				},
 				documentation = cmp.config.window.bordered(),
 			},
