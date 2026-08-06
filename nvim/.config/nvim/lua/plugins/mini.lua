@@ -3,6 +3,16 @@ return {
 	version = false,
 	lazy = true,
 	event = "VeryLazy",
+	keys = {
+		{
+			"-",
+			function()
+				require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
+			end,
+			desc = "Open mini.files",
+			mode = { "n" },
+		},
+	},
 	config = function()
 		-- Comment toggling (gc, gb, etc.)
 		require("mini.comment").setup()
@@ -28,6 +38,34 @@ return {
 
 					return filtered
 				end,
+			},
+		})
+		-- File manager
+		require("mini.files").setup({
+			mappings = {
+				close = "q",
+				go_in = "l",
+				go_in_plus = "<CR>",
+				go_out = "H",
+				go_out_plus = "h",
+				mark_goto = "'",
+				mark_set = "m",
+				reset = ",",
+				reveal_cwd = ".",
+				show_help = "g?",
+				synchronize = "s",
+				trim_left = "<",
+				trim_right = ">",
+			},
+			options = {
+				-- Whether to delete permanently or move into module-specific trash
+				permanent_delete = true,
+				-- Whether to use for editing directories
+				use_as_default_explorer = true,
+			},
+			windows = {
+				-- Whether to show preview of file/directory under cursor
+				preview = true,
 			},
 		})
 	end,
