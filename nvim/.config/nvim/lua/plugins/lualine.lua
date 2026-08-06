@@ -26,6 +26,17 @@ return {
 
 		local branch = { "branch", icon = { "", color = { fg = "#A6D4DE" } }, "|" }
 
+		local macro = {
+			function()
+				local register = vim.fn.reg_recording()
+				if register == "" then
+					return ""
+				end
+				return "Recording @" .. register
+			end,
+			color = { fg = "#ff9e64", gui = "bold" },
+		}
+
 		lualine.setup({
 			icons_enabled = true,
 			options = {
@@ -36,6 +47,7 @@ return {
 				lualine_b = { branch },
 				lualine_c = { diff, filename },
 				lualine_x = {
+					macro,
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
