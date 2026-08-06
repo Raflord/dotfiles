@@ -42,13 +42,3 @@ vim.opt.hlsearch = true
 
 vim.opt.mouse = "a"
 vim.g.editorconfig = true
-
-vim.diagnostic.config({
-	float = {
-		border = "rounded",
-		source = "if_many",
-		header = "",
-		prefix = "",
-		suffix = "",
-	},
-})
