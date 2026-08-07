@@ -24,8 +24,8 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				-- keymaps
-				opts.desc = "Show LSP references"
-				vim.keymap.set("n", "gR", vim.lsp.buf.references, opts) -- show definition, references
+				-- opts.desc = "Show LSP references"
+				-- vim.keymap.set("n", "gR", vim.lsp.buf.references, opts) -- show definition, references
 
 				opts.desc = "Go to declaration"
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
@@ -47,8 +47,8 @@ return {
 				opts.desc = "Smart rename"
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-				opts.desc = "Show buffer diagnostics"
-				vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, opts) -- show  diagnostics for file
+				-- opts.desc = "Show buffer diagnostics"
+				-- vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, opts) -- show  diagnostics for file
 
 				opts.desc = "Show line diagnostics"
 				vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts) -- show diagnostics for line

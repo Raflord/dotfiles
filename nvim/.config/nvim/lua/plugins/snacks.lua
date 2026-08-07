@@ -3,6 +3,25 @@ return {
 	priority = 1000,
 	lazy = false,
 	keys = {
+		-- Show LSP References
+		{
+			"gR",
+			function()
+				Snacks.picker.lsp_references({
+					include_current = true,
+				})
+			end,
+			nowait = true,
+			desc = "Show LSP References",
+		},
+		-- Show Buffer Diagnostics
+		{
+			"<leader>D",
+			function()
+				Snacks.picker.diagnostics_buffer()
+			end,
+			desc = "Show Buffer Diagnostics",
+		},
 		-- Grep Open Buffers
 		{
 			"<leader>sb",
@@ -54,25 +73,7 @@ return {
 		{
 			"<leader><leader>",
 			function()
-				Snacks.picker.buffers({
-					on_show = function()
-						vim.cmd.stopinsert()
-					end,
-					finder = "buffers",
-					format = "buffer",
-					hidden = true,
-					unloaded = true,
-					current = true,
-					sort_lastused = true,
-					win = {
-						input = {
-							keys = {
-								["d"] = "bufdelete",
-							},
-						},
-						list = { keys = { ["d"] = "bufdelete" } },
-					},
-				})
+				Snacks.picker.buffers()
 			end,
 			desc = "Find Buffers",
 		},
