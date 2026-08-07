@@ -3,6 +3,13 @@ return {
 	priority = 1000,
 	lazy = false,
 	keys = {
+		-- Open File Explorer
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer.reveal()
+			end,
+		},
 		-- Show LSP References
 		{
 			"gR",
@@ -85,6 +92,8 @@ return {
 		quickfile = { enabled = true },
 		scope = { enabled = true },
 		image = { enabled = false },
+		dashboard = { enabled = true },
+		explorer = { enabled = true },
 		picker = {
 			enabled = true,
 			layout = { preset = "telescope" },
