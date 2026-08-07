@@ -21,7 +21,7 @@ require("vim._core.ui2").enable({
 
 vim.opt.winborder = "rounded"
 vim.opt.cmdheight = 0 -- Keep command-line hidden when empty
-vim.opt.shortmess = "altToOCFWI" -- Message filtering logic natively
+vim.opt.shortmess = "altToOCFW" -- Message filtering logic natively
 
 -- Native diagnostic floating window.
 vim.diagnostic.config({
