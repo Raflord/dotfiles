@@ -18,6 +18,14 @@ return {
 		require("mini.comment").setup()
 		-- Surround (add/delete/change surrounding characters)
 		require("mini.surround").setup()
+		-- Show git diffs and hunks
+		require("mini.diff").setup({
+			view = {
+				style = "sign",
+				signs = { add = "▎", change = "▎", delete = "▁" },
+				priority = 199,
+			},
+		})
 		-- Handle notifications
 		require("mini.notify").setup({
 			content = {
