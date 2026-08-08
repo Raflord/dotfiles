@@ -4,18 +4,11 @@ require("vim._core.ui2").enable({
 		-- Display regular messages in the command-line area.
 		targets = "cmd",
 		-- Maximum expanded message height.
-		cmd = {
-			height = 0.5,
-		},
+		cmd = { height = 0.5 },
 		-- Temporary message window configuration.
-		msg = {
-			height = 0.5,
-			timeout = 5000,
-		},
+		msg = { height = 0.5, timeout = 5000 },
 		-- Native pager configuration.
-		pager = {
-			height = 0.5,
-		},
+		pager = { height = 0.5 },
 	},
 })
 

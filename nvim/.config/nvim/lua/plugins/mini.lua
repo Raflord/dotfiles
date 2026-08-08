@@ -3,16 +3,6 @@ return {
 	version = false,
 	lazy = true,
 	event = "VeryLazy",
-	keys = {
-		{
-			"-",
-			function()
-				require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
-			end,
-			desc = "Open mini.files",
-			mode = { "n" },
-		},
-	},
 	config = function()
 		-- Comment toggling (gc, gb, etc.)
 		require("mini.comment").setup()
@@ -49,7 +39,8 @@ return {
 			},
 		})
 		-- File manager
-		require("mini.files").setup({
+		local files = require("mini.files")
+		files.setup({
 			mappings = {
 				close = "q",
 				go_in = "l",
@@ -76,5 +67,10 @@ return {
 				preview = true,
 			},
 		})
+
+		-- Custom keymap
+		vim.keymap.set("n", "-", function()
+			files.open(vim.api.nvim_buf_get_name(0), true)
+		end, { desc = "Open mini.files" })
 	end,
 }
