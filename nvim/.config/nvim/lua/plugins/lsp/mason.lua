@@ -4,7 +4,6 @@ return {
 	dependencies = {
 		"mason-org/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		"hrsh7th/cmp-nvim-lsp",
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
@@ -34,16 +33,14 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"tsgo",
-				"html",
 				"tailwindcss",
 				"gopls",
-				"emmet_ls",
-				"emmet_language_server",
 				"marksman",
 				"superhtml",
 				"ruff",
 				"ty",
 				"templ",
+				"bashls",
 			},
 		})
 		-- formatters
@@ -55,6 +52,7 @@ return {
 				"xmlformatter",
 				"biome",
 				"ruff",
+				"shfmt",
 			},
 		})
 	end,
