@@ -39,7 +39,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function(args)
 		vim.opt_local.conceallevel = 2
 		vim.opt_local.concealcursor = "nc"
-
 		vim.bo[args.buf].syntax = "markdown"
 	end,
 })
