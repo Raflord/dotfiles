@@ -33,7 +33,6 @@ PACMAN_PACKAGES=(
     hypridle
     ghostty
     xdg-desktop-portal-gtk
-    helvum
     wiremix
     zig
     neovim
@@ -41,6 +40,7 @@ PACMAN_PACKAGES=(
     gnome-calculator
     gnome-disk-utility
     firefox
+    fd
 )
 
 REMOVE_PACKAGES=(
@@ -49,11 +49,11 @@ REMOVE_PACKAGES=(
 )
 
 STOW_PACKAGES=(
-    bkacgrounds
+    backgrounds
     ghostty
     hypr
     nvim
-    waybar-hyprland
+    waybar
     wofi
     zsh
 )
