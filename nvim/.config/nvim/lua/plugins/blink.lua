@@ -49,6 +49,12 @@ return {
 					enabled = true,
 				},
 
+				accept = {
+					auto_brackets = {
+						enabled = true,
+					},
+				},
+
 				menu = {
 					border = "rounded",
 					winhighlight = "Normal:FLoatBorder",
