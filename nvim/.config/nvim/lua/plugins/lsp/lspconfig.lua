@@ -2,8 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		{ "antosha417/nvim-lsp-file-operations", config = true },
 		"nvim-lua/plenary.nvim",
 		{
 			"folke/lazydev.nvim",
@@ -24,9 +22,6 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				-- keymaps
-				-- opts.desc = "Show LSP references"
-				-- vim.keymap.set("n", "gR", vim.lsp.buf.references, opts) -- show definition, references
-
 				opts.desc = "Go to declaration"
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
@@ -47,9 +42,6 @@ return {
 				opts.desc = "Smart rename"
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-				-- opts.desc = "Show buffer diagnostics"
-				-- vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, opts) -- show  diagnostics for file
-
 				opts.desc = "Show line diagnostics"
 				vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
@@ -62,12 +54,6 @@ return {
 				vim.keymap.set("i", "<C-h>", function()
 					vim.lsp.buf.signature_help()
 				end, opts)
-			end,
-		})
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*.go",
-			callback = function()
-				vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
 			end,
 		})
 
@@ -95,7 +81,7 @@ return {
 		end, { desc = "Toggle Inlay Hints" })
 
 		-- LSP configs
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		vim.lsp.config("*", { capabilities = capabilities })
 
 		vim.lsp.config("lua_ls", {
@@ -122,8 +108,24 @@ return {
 					analyses = {
 						unusedparams = true,
 					},
+					gofumpt = true,
+					hints = {
+						assignVariableTypes = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						constantValues = true,
+						functionTypesParameters = true,
+						parameterNames = true,
+						rangeVariableTypes = true,
+					},
 				},
 			},
+		})
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			pattern = "*.go",
+			callback = function()
+				vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+			end,
 		})
 
 		vim.lsp.enable({

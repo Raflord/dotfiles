@@ -1,31 +1,21 @@
 return {
-	"roobert/tailwindcss-colorizer-cmp.nvim",
+	"NvChad/nvim-colorizer.lua",
 	lazy = true,
 	ft = "javascript, typescript, javascriptreact, typescriptreact",
-	{
-		"NvChad/nvim-colorizer.lua",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		opts = {},
-		config = function()
-			local nvchadcolorizer = require("colorizer")
-			local tailwindcolorizer = require("tailwindcss-colorizer-cmp")
+	opts = {
+		user_default_options = {
+			tailwind = true,
+		},
 
-			nvchadcolorizer.setup({
-				user_default_options = {
-					tailwind = true,
-				},
-				filetypes = { "html", "css", "javascript", "typescript", "jsx", "tsx", "vue", "svelte" },
-			})
-
-			tailwindcolorizer.setup({
-				color_square_width = 2,
-			})
-
-			vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
-				callback = function()
-					vim.cmd("ColorizerAttachToBuffer")
-				end,
-			})
-		end,
+		filetypes = {
+			"html",
+			"css",
+			"javascript",
+			"typescript",
+			"javascriptreact",
+			"typescriptreact",
+			"vue",
+			"svelte",
+		},
 	},
 }
