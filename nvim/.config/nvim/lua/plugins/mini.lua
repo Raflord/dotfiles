@@ -65,6 +65,8 @@ return {
 			windows = {
 				-- Whether to show preview of file/directory under cursor
 				preview = true,
+				-- Preview window width
+				width_preview = 80,
 			},
 		})
 
