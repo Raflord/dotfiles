@@ -69,18 +69,6 @@ return {
 			Snacks.explorer.reveal()
 		end, "Open File Explorer")
 
-		-- Show LSP References
-		keymap("gR", function()
-			Snacks.picker.lsp_references({
-				include_current = true,
-			})
-		end, "Show LSP References")
-
-		-- Show Buffer Diagnostics
-		keymap("<leader>D", function()
-			Snacks.picker.diagnostics_buffer()
-		end, "Show Buffer Diagnostics")
-
 		-- Grep Open Buffers
 		keymap("<leader>sb", function()
 			Snacks.picker.grep_buffers()
@@ -110,7 +98,7 @@ return {
 
 		-- Smart Find Files
 		keymap("<leader>ss", function()
-			Snacks.picker.smart({})
+			Snacks.picker.smart()
 		end, "Smart Find Files")
 
 		-- Find Buffers

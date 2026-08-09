@@ -20,8 +20,16 @@ return {
 				-- Buffer local mappings
 				-- Check `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf, silent = true }
+				local picker = require("snacks.picker")
 
 				-- keymaps
+				opts.desc = "Show LSP references"
+				vim.keymap.set("n", "gR", function() -- show definition, references
+					picker.lsp_references({
+						include_current = true,
+					})
+				end, opts)
+
 				opts.desc = "Go to declaration"
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
@@ -35,12 +43,13 @@ return {
 				vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts) -- show lsp type definitions
 
 				opts.desc = "See available code actions"
-				vim.keymap.set({ "n", "v" }, "<leader>vca", function()
-					vim.lsp.buf.code_action()
-				end, opts) -- see available code actions, in visual mode will apply to selection
+				vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
 				opts.desc = "Smart rename"
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+
+				opts.desc = "Show buffer diagnostics"
+				vim.keymap.set("n", "<leader>D", picker.diagnostics_buffer, opts)
 
 				opts.desc = "Show line diagnostics"
 				vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts) -- show diagnostics for line
@@ -51,9 +60,7 @@ return {
 				opts.desc = "Restart LSP"
 				vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
-				vim.keymap.set("i", "<C-h>", function()
-					vim.lsp.buf.signature_help()
-				end, opts)
+				vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 			end,
 		})
 
