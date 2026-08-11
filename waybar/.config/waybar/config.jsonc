@@ -34,10 +34,12 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "tooltip": false,
-    "all-outputs": true,
+    "all-outputs": false,
     "sort-by-number": true,
     "disable-scroll": false,
     "active-only": false,
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})'",
   },
 
   "custom/logo": {

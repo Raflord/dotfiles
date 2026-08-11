@@ -24,7 +24,10 @@ return {
 					local filtered = {}
 					for _, notif in ipairs(notif_arr) do
 						-- skip "No information available" messages
-						if not notif.msg:find("No information available") then
+						if
+							not notif.msg:find("No information available")
+							and not notif.msg:find("No code actions available")
+						then
 							table.insert(filtered, notif)
 						end
 					end
