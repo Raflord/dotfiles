@@ -2,7 +2,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
+
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -35,5 +39,7 @@ printf '\e[6 q' # Set beam cursor
 
 # Tools
 eval "$(zoxide init zsh)"
+
+source <(fzf --zsh)
 
 [[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
