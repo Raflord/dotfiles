@@ -139,7 +139,6 @@ return {
 			"lua_ls",
 			"tsgo",
 			"gopls",
-			"html",
 			"tailwindcss",
 			"ruff",
 			"ty",
