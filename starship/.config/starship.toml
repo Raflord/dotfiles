@@ -1,0 +1,53 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 1000
+
+add_newline = false
+
+format = """
+$character\
+$directory\
+$git_branch\
+$git_status\
+$bun\
+$c\
+$cmake\
+$cpp\
+$dotnet\
+$golang\
+$gradle\
+$java\
+$lua\
+$maven\
+$nodejs\
+$ocaml\
+$odin\
+$perl\
+$php\
+$pulumi\
+$python\
+$rlang\
+$rust\
+$scala\
+$solidity\
+$terraform\
+$xmake\
+$zig\
+$conda\
+$cmd_duration\
+"""
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+[directory]
+truncation_length = 1
+read_only = '🔒'
+
+[git_branch]
+symbol = 'git'
+format = '[$symbol:\([$branch](bold red)\)](bold blue) '
+
+[git_status]
+style = 'bold yellow'
