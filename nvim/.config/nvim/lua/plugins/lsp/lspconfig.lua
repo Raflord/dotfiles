@@ -110,29 +110,14 @@ return {
 		vim.lsp.config("gopls", {
 			settings = {
 				gopls = {
-					completeUnimported = true,
-					usePlaceholders = true,
 					analyses = {
 						unusedparams = true,
 					},
+					completeUnimported = true,
+					staticcheck = true,
 					gofumpt = true,
-					hints = {
-						assignVariableTypes = true,
-						compositeLiteralFields = true,
-						compositeLiteralTypes = true,
-						constantValues = true,
-						functionTypesParameters = true,
-						parameterNames = true,
-						rangeVariableTypes = true,
-					},
 				},
 			},
-		})
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*.go",
-			callback = function()
-				vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
-			end,
 		})
 
 		vim.lsp.enable({
