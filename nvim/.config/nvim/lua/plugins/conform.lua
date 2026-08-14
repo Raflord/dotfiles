@@ -18,6 +18,7 @@ return {
 				markdown = { "biome-check", "prettierd", "prettier" },
 				python = { "ruff_organize_imports", "ruff_fix", "ruff_format" },
 				bash = { "shfmt" },
+				go = { "gofumpt", "goimports" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()

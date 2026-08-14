@@ -53,6 +53,8 @@ return {
 				"biome",
 				"ruff",
 				"shfmt",
+				"goimports",
+				"gofumpt",
 			},
 		})
 	end,
