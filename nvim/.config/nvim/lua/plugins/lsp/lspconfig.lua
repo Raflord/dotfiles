@@ -42,8 +42,8 @@ return {
 				opts.desc = "Show LSP type definitions"
 				vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts) -- show lsp type definitions
 
-				opts.desc = "See available code actions"
-				vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+				opts.desc = "Show available code actions"
+				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
 				opts.desc = "Smart rename"
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
