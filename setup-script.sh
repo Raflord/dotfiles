@@ -7,45 +7,47 @@ readonly SCRIPT_NAME="${0##*/}"
 readonly DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
 
 PACMAN_PACKAGES=(
-    thunar
-    thunar-archive-plugin
-    xarchiver
     7zip
-    go
-    nodejs
-    npm
-    ttf-jetbrains-mono
-    ttf-jetbrains-mono-nerd
-    noto-fonts-emoji
-    swaync
-    power-profiles-daemon
-    python-gobject
+    discord
+    fd
+    firefox
     fzf
-    ripgrep
-    unzip
-    wl-clipboard
-    obs-studio
-    nwg-look
-    make
-    hyprshot
-    hyprpaper
-    hyprlock
-    hypridle
     ghostty
-    xdg-desktop-portal-gtk
-    wiremix
-    zig
-    neovim
-    tree-sitter-cli
     gnome-calculator
     gnome-disk-utility
-    firefox
-    fd
+    go
+    hypridle
+    hyprlock
+    hyprpaper
+    hyprshot
+    make
+    neovim
+    nodejs
+    noto-fonts-emoji
+    npm
+    nwg-look
+    obs-studio
+    power-profiles-daemon
+    python-gobject
+    ripgrep
+    spotify-launcher
+    swaync
+    thunar
+    thunar-archive-plugin
+    tree-sitter-cli
+    ttf-jetbrains-mono
+    ttf-jetbrains-mono-nerd
+    unzip
+    wiremix
+    wl-clipboard
+    xarchiver
+    xdg-desktop-portal-gtk
+    zig
 )
 
 REMOVE_PACKAGES=(
-    kitty
     dolphin
+    kitty
 )
 
 STOW_PACKAGES=(
