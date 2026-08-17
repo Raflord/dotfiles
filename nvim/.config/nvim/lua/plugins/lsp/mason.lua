@@ -32,7 +32,7 @@ return {
 			-- servers for mason to install
 			ensure_installed = {
 				"lua_ls",
-				"tsgo",
+				"tsc",
 				"tailwindcss",
 				"gopls",
 				"marksman",

@@ -122,7 +122,7 @@ return {
 
 		vim.lsp.enable({
 			"lua_ls",
-			"tsgo",
+			"tsc",
 			"gopls",
 			"tailwindcss",
 			"ruff",
