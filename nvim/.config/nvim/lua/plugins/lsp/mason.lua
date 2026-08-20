@@ -41,6 +41,7 @@ return {
 				"ty",
 				"templ",
 				"bashls",
+				"taplo",
 			},
 		})
 		-- formatters
