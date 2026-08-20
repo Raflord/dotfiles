@@ -7,31 +7,15 @@ $character\
 $directory\
 $git_branch\
 $git_status\
-$bun\
-$c\
-$cmake\
-$cpp\
 $dotnet\
 $golang\
-$gradle\
-$java\
+$haskell\
 $lua\
-$maven\
 $nodejs\
-$ocaml\
-$odin\
-$perl\
 $php\
-$pulumi\
 $python\
-$rlang\
 $rust\
-$scala\
-$solidity\
-$terraform\
-$xmake\
 $zig\
-$conda\
 $cmd_duration\
 """
 
@@ -41,7 +25,10 @@ error_symbol = '[➜](bold red)'
 
 [directory]
 truncation_length = 1
-read_only = '🔒'
+read_only = " 󰌾"
+
+[dotnet]
+symbol = " "
 
 [git_branch]
 symbol = 'git'
@@ -49,3 +36,36 @@ format = '[$symbol:\([$branch](bold red)\)](bold blue) '
 
 [git_status]
 style = 'bold yellow'
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os]
+disabled = false
+format = '[$symbol]($style)'
+style = "bold cyan"
+
+[os.symbols]
+Arch = " "
+Windows = "󰍲 "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[zig]
+symbol = " "
