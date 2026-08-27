@@ -121,18 +121,19 @@ return {
 		})
 
 		vim.lsp.enable({
-			"lua_ls",
-			"tsc",
-			"gopls",
-			"tailwindcss",
-			"ruff",
-			"ty",
-			"superhtml",
-			"biome",
-			"templ",
-			"taplo",
-			"shfmt",
 			"bashls",
+			"biome",
+			"gopls",
+			"lua_ls",
+			"ruff",
+			"shfmt",
+			"superhtml",
+			"tailwindcss",
+			"taplo",
+			"templ",
+			"tsc",
+			"ty",
+			"yamlls",
 		})
 	end,
 }
