@@ -49,3 +49,10 @@ esac
 source <(fzf --zsh)
 
 [[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/home/rafael/.bun/_bun" ] && source "/home/rafael/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
