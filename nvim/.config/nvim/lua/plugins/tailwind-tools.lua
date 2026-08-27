@@ -14,8 +14,6 @@ return {
 				"typescript",
 				"javascriptreact",
 				"typescriptreact",
-				"vue",
-				"svelte",
 			},
 		})
 	end,
